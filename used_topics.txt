@@ -347,3 +347,4 @@
 [ANCIENT] Topping up the wallet does not raise this limit. If this isn’t your Pollinations account, contact whoever runs the app or service you’re using.
 [ANCIENT] Topping up the wallet does not raise this limit. If this isn’t your Pollinations account, contact whoever runs the app or service you’re using.
 [ANCIENT] Topping up the wallet does not raise this limit. If this isn’t your Pollinations account, contact whoever runs the app or service you’re using.
+[ANCIENT] Topping up the wallet does not raise this limit. If this isn’t your Pollinations account, contact whoever runs the app or service you’re using.
