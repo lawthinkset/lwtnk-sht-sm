@@ -45,6 +45,10 @@ def get_authenticated_service():
 
 def upload_to_youtube(video_file, title, description, tags, category_id='27'):
     """Upload video to YouTube and return result."""
+    upload_yt = os.getenv("UPLOAD_YOUTUBE", "true").lower()
+    if upload_yt in ("false", "0", "no"):
+        print("[youtube] ⏸️ Skipping YouTube upload (UPLOAD_YOUTUBE=false). Facebook will continue.")
+        return None
     youtube = get_authenticated_service()
     
     body = {
@@ -90,6 +94,11 @@ def upload_to_youtube(video_file, title, description, tags, category_id='27'):
 
 def main():
     """Upload the generated video to YouTube."""
+    upload_yt = os.getenv("UPLOAD_YOUTUBE", "true").lower()
+    if upload_yt in ("false", "0", "no"):
+        print("[youtube] ⏸️ Skipping YouTube upload (UPLOAD_YOUTUBE=false). Facebook will continue.")
+        return
+
     video_file = Path('output/final_video.mp4')
     
     if not video_file.exists():
